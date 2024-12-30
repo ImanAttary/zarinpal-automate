@@ -1,0 +1,24 @@
+# Create new branch from delevop : 
+    git checkout develop
+    git checkout -b "new branch name"
+    git fecth --all
+    git add .
+    git commit -m "new branch"
+    git push origin "new branch name"
+
+# Push changes commit : 
+    git status
+    git add  . OR each changes url
+    git commit -m "comment for changes"
+    git push origin branch name
+
+If has conflict : 
+
+    resolve conflict
+    git commit -m "edit changes"
+    git push origin branch-name 
+
+# Get changes from master 
+    git checkout "your branch"
+    git pull origin "Master branch"
+    git push origin "your branch"

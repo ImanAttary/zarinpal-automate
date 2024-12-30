@@ -1,0 +1,16 @@
+#gitlab.hamrah.in:5555/zarinpal_v4/qa/
+
+services:
+  pytest:
+    image: quality-gate:latest
+    container_name: pytest
+    ports:
+      - 4444:4444
+      - 7900:7900
+    shm_size: '2g'
+    platform: linux/amd64
+    command: ["/bin/bash", "-c", "./run_tests.sh"]
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
